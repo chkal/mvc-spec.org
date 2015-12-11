@@ -16,6 +16,10 @@
     "metalsmith-assets": {
       "source": "public",
       "destination": "."
+    },
+    "metalsmith-assets": {
+      "source": "node_modules/bootstrap/dist",
+      "destination": "vendor/bootstrap"
     }
   }
 }

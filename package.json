@@ -10,9 +10,12 @@
     "metalsmith-assets": "~0.1.0",
     "metalsmith-less": "~2.0.0",
     "handlebars": "^4.0.5",
-    "bootstrap": "~3.3.6"
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.1.4",
+    "http-server": "~0.8.5"
   },
   "scripts": {
-    "build": "metalsmith"
+    "build": "metalsmith",
+    "serve": "http-server build"
   }
 }
