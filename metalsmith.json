@@ -1,0 +1,18 @@
+{
+  "source": "src",
+  "destination": "build",
+  "plugins": {
+    "metalsmith-markdown": {},
+    "metalsmith-asciidoc": {},
+    "metalsmith-layouts": {
+      "engine": "handlebars",
+      "directory": "layouts",
+      "default": "layout.html",
+      "pattern": "*"
+    },
+    "metalsmith-assets": {
+      "source": "public",
+      "destination": "."
+    }
+  }
+}
