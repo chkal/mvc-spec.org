@@ -1,5 +1,5 @@
 ---
-title: MVC 1.0
+title: Home
 ---
 
 WIP :)
