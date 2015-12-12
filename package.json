@@ -7,7 +7,7 @@
     "metalsmith-layouts": "~1.4.2",
     "metalsmith-markdown": "~0.2.1",
     "metalsmith-asciidoc": "~1.1.0",
-    "metalsmith-assets": "~0.1.0",
+    "metalsmith-static": "0.0.5",
     "metalsmith-less": "~2.0.0",
     "handlebars": "^4.0.5",
     "bootstrap": "~3.3.6",

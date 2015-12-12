@@ -13,13 +13,15 @@
     "metalsmith-less": {
       "pattern": "**/*.less"
     },
-    "metalsmith-assets": {
-      "source": "public",
-      "destination": "."
-    },
-    "metalsmith-assets": {
-      "source": "node_modules/bootstrap/dist",
-      "destination": "vendor/bootstrap"
-    }
+    "metalsmith-static": [{
+      "src": "public",
+      "dest": "."
+    },{
+      "src": "node_modules/bootstrap/dist",
+      "dest": "vendor/bootstrap"
+    },{
+      "src": "node_modules/jquery/dist",
+      "dest": "vendor/jquery"
+    }]
   }
 }
