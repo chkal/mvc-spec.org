@@ -12,10 +12,12 @@
     "handlebars": "^4.0.5",
     "bootstrap": "~3.3.6",
     "jquery": "~2.1.4",
-    "http-server": "~0.8.5"
+    "http-server": "~0.8.5",
+    "onchange": "~2.0.0"
   },
   "scripts": {
     "build": "metalsmith",
+    "watch": "onchange 'src/**' 'layouts/**' -- metalsmith",
     "serve": "http-server build"
   }
 }
