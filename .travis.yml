@@ -11,6 +11,7 @@ deploy:
   region: eu-west-1
   local-dir: build
   acl: public_read
+  cache_control: "max-age=259200"
   on:
     repo: chkal/mvc-spec.org
     branch: master
