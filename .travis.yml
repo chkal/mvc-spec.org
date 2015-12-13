@@ -1,3 +1,17 @@
 language: node_js
 node_js: stable
 script: npm run build
+deploy:
+  provider: s3
+  access_key_id: AKIAI2M4KIUZD3QZNEMA
+  secret_access_key:
+    secure: JXCiauJgXlHx9/AbEn/SQ4YNNZ329e27jADYC0+FYDksltg9wh4VjVkhWCXeJ6KtdbEvjsnZQZsv7F89HyhWTzAS5w+6phEx0gAcny+NG28s5ZmK914lXpjF3igI0c/oFCe3OYme7R+AvOrrzxVGkz4inD3J3zQ5v+/nXARel50aJOKA+/ahbSGjLkNlqJai+HpUJW1k4gOJ2Bz+wRBI7rpVf3jSGiRRf/fVM0QhGQW0Ll5A2EMee6wr4ATEfL22x2HA3wIa7TNb1cSEiQK0AWo+w+iuEQnr8e0mdQRTf1y4CnadrSyiGn6uoq70kr83ijMiJyppQ957oGcTrw/0NDZoYC6BnN09dqEKkuSOVv6SHnQaKJQtjhPlezvawBDBuoloSz55vpGxc1Z99p8ypjo+iy7CgA+sDNPsYA0oyQ1WXbx5CoAFp56zSPjPCOExbJ3LK+cTW0r1VKe+NhmacPGz8h5T0eUzuSixGyuzh3QxDgsRMVMERSs5/NX0ijQsONqk3JWGooMrf0y6Mqafv7gs4i8SCy7dHsCeOztIEg0G2phQyl6ZNrg58kqTUi58yFRiKYgku9GvKlWyBSputdXYBiPDFEo2f57QuooU+9g1ji1ib7mYyS0nVZUVIrGZv88PpE3P+Qp6IGHm0TPA/lNe7E9YACIkEQAC7PqEzJg=
+  bucket: www.mvc-spec.org
+  skip_cleanup: true
+  endpoint: www.mvc-spec.org.s3-website-eu-west-1.amazonaws.com
+  region: eu-west-1
+  local-dir: build
+  acl: public_read
+  on:
+    repo: chkal/mvc-spec.org
+    branch: master
