@@ -18,7 +18,7 @@ var metalsmith = Metalsmith(__dirname)
     "default": "layout.html",
   }))
   .use(less({
-    "pattern": "css/master.less"
+    "pattern": "css/style.less"
   }))
   .use(ignore([
     "**/*.less"
