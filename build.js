@@ -4,8 +4,8 @@ var asciidoc = require("metalsmith-asciidoc");
 var layouts = require("metalsmith-layouts");
 var less = require("metalsmith-less");
 var assets = require("metalsmith-static");
-var notifier = require('node-notifier');
-var argv = require('yargs').argv;
+var notifier = require("node-notifier");
+var argv = require("yargs").argv;
 
 var metalsmith = Metalsmith(__dirname)
   .use(markdown())
@@ -28,16 +28,35 @@ var metalsmith = Metalsmith(__dirname)
     "src": "node_modules/jquery/dist",
     "dest": "vendor/jquery"
   }]))
-  .build(function(err){
-    if(err) throw err;
+  .build(function(err) {
+    if(err) {
+      handleError(err);
+    }
+    else {
+      handleSuccess();
+    }
   });
 
-if(argv.watch) {
-  notifier.notify({
-    title: 'Metalsmith',
-    message: 'Build successful!'
-  });
+function handleSuccess() {
+  if(argv.watch) {
+    notifier.notify({
+      title: "Metalsmith",
+      message: "Build successful!"
+    });
+  }
+  else {
+    console.log("Done!");
+  }
 }
-else {
-  console.log("Done!");
+
+function handleError(err) {
+  if(argv.watch) {
+    notifier.notify({
+      title: "Metalsmith",
+      message: "*** Error: " + err.message + " ***"
+    });
+  }
+  else {
+    throw err;
+  }
 }
