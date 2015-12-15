@@ -3,6 +3,7 @@ var markdown = require("metalsmith-markdown");
 var asciidoc = require("metalsmith-asciidoc");
 var layouts = require("metalsmith-layouts");
 var less = require("metalsmith-less");
+var ignore = require("metalsmith-ignore");
 var assets = require("metalsmith-static");
 var notifier = require("node-notifier");
 var argv = require("yargs").argv;
@@ -19,6 +20,9 @@ var metalsmith = Metalsmith(__dirname)
   .use(less({
     "pattern": "css/master.less"
   }))
+  .use(ignore([
+    "**/*.less"
+  ]))
   .use(assets([{
     "src": "public",
     "dest": "."
