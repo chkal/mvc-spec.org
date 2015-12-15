@@ -16,8 +16,8 @@
     "onchange": "~2.0.0"
   },
   "scripts": {
-    "build": "metalsmith",
-    "watch": "onchange 'src/**' 'layouts/**' -- metalsmith",
+    "build": "node build.js",
+    "watch": "onchange 'src/**' 'layouts/**' -- npm run build",
     "serve": "http-server build"
   }
 }
