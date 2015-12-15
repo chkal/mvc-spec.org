@@ -13,11 +13,13 @@
     "bootstrap": "~3.3.6",
     "jquery": "~2.1.4",
     "http-server": "~0.8.5",
-    "onchange": "~2.0.0"
+    "onchange": "~2.0.0",
+    "node-notifier": "~4.4.0",
+    "yargs": "~3.31.0"
   },
   "scripts": {
     "build": "node build.js",
-    "watch": "onchange 'src/**' 'layouts/**' -- npm run build",
+    "watch": "onchange 'src/**' 'layouts/**' -- node build.js --watch",
     "serve": "http-server build"
   }
 }

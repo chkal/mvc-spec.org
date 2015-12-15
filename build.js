@@ -4,6 +4,8 @@ var asciidoc = require("metalsmith-asciidoc");
 var layouts = require("metalsmith-layouts");
 var less = require("metalsmith-less");
 var assets = require("metalsmith-static");
+var notifier = require('node-notifier');
+var argv = require('yargs').argv;
 
 var metalsmith = Metalsmith(__dirname)
   .use(markdown())
@@ -30,4 +32,12 @@ var metalsmith = Metalsmith(__dirname)
     if(err) throw err;
   });
 
-console.log("Done!");
+if(argv.watch) {
+  notifier.notify({
+    title: 'Metalsmith',
+    message: 'Build successful!'
+  });
+}
+else {
+  console.log("Done!");
+}
