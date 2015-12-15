@@ -11,12 +11,13 @@ var metalsmith = Metalsmith(__dirname)
   .use(markdown())
   .use(asciidoc())
   .use(layouts({
+    "pattern": "*.html",
     "engine": "handlebars",
     "directory": "layouts",
     "default": "layout.html",
   }))
   .use(less({
-    "pattern": "*.less"
+    "pattern": "css/master.less"
   }))
   .use(assets([{
     "src": "public",
