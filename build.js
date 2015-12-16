@@ -15,6 +15,7 @@ var metalsmith = Metalsmith(__dirname)
     "pattern": "*.html",
     "engine": "handlebars",
     "directory": "layouts",
+    "partials": "layouts",
     "default": "layout.html",
   }))
   .use(less({
