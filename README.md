@@ -23,7 +23,7 @@ First start the development server which serves the site:
 
     $ npm run serve
 
-You can now point your browser to: http://localhost:8080
+You can now point your browser to: [http://localhost:8080/](http://localhost:8080/)
 
 Then open a new console add start watching the files for automatic rebuilding
 on file modification:
