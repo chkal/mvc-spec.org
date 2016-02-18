@@ -21,7 +21,7 @@ If you are actively working on the site, you should follow this workflow.
 
 First start the development server which serves the site:
 
-   $ npm run serve
+    $ npm run serve
 
 You can now point your browser to: http://localhost:8080
 
